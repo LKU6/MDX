@@ -1,3 +1,8 @@
+## Not testing iteratively
+**Beginners often write huge MDX queries and expect them to work.**
+**Fix**: Start small: test sets, members, and calculations one at a time.
+
+
 ## confusing sets, tuples, and members
 ### right way: {} defines a set; () defines a tuple. (mistake: Using parentheses {} and () incorrectly.)
 ```
@@ -29,3 +34,8 @@ Example code:
 ```
 **fix:** combine members at the same level, or use functions like Descendants().
 
+## overusing calculated measures
+
+**Mistake**: creating too many calculated measures in the cube script for every small calculation.
+**Effect**: Slows down the cube, makes maintenance hard.
+**Fix**: Create only reusable or important calculations; ad hoc MDX can compute some values on the fly.
