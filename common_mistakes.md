@@ -1,3 +1,5 @@
+# When learning MDX, forget about SQL
+
 ## Not testing iteratively
 **Beginners often write huge MDX queries and expect them to work.**
 **Fix**: Start small: test sets, members, and calculations one at a time.
