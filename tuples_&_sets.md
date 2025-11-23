@@ -18,6 +18,27 @@ A **tuple** is when you pick **one from each box** at the same time.
 ```
 - This is like saying: “I want **January AND Apple together**.”  
 - In MDX, tuples are written with parentheses: `(Member1, Member2)`
+---
+
+A tuple is a combination of members from one or more dimensions.
+
+To compose a tuple with more than one dimension, you must wrap the members in parentheses, for example:
+```
+([Customer].[Chicago, IL], [Time].[Jan, 2005])
+```
+```
+SELECT
+  {
+    ( [Time].[2005], [Measures].[Dollar Sales] ),
+    ( [Time].[Feb, 2005], [Measures].[Unit Sales] )
+  } ON COLUMNS ,
+  { [Product].[Tools], [Product].[Toys]
+  } ON ROWS
+
+FROM [Sales]
+```
+
+
 
 ---
 
